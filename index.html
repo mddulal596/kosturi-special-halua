@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="bn">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>কস্তূরী স্পেশাল হালুয়া - প্রিমিয়াম হেলথ সাপ্লিমেন্ট</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <script id="tailwind-config">
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>কস্তূরী স্পেশাল হালুয়া - প্রিমিয়াম হেলথ সাপ্লিমেন্ট</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -64,21 +62,25 @@
               "surface-container-low": "#f1f4f6"
             },
             fontFamily: {
-              "headline": ["'Hind Siliguri'", "sans-serif"],
-              "body": ["'Hind Siliguri'", "sans-serif"],
-              "label": ["'Hind Siliguri'", "sans-serif"]
+              "headline": ["Hind Siliguri", "sans-serif"],
+              "body": ["Hind Siliguri", "sans-serif"],
+              "label": ["Hind Siliguri", "sans-serif"]
             },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
           },
         },
       }
     </script>
-    <style>
+<style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Hind Siliguri', 'Inter', sans-serif; }
-        h1, h2, h3, .brand-font { font-family: 'Hind Siliguri', sans-serif; }
+        body { 
+            font-family: 'Hind Siliguri', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-manrope { font-family: 'Hind Siliguri', sans-serif; }
         html { scroll-behavior: smooth; }
     
         a[href='#order']:hover, button[type='submit']:hover {
@@ -89,7 +91,6 @@
             transform: rotate(180deg);
         }
 
-        /* Chatbot Transitions */
         #chatbot-window {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             transform: scale(0.95) translateY(10px);
@@ -108,183 +109,898 @@
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Premium Typography Enhancements */
+        .text-balanced { text-wrap: balance; }
+        .letter-tight { letter-spacing: -0.01em; }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
-
+<body class="bg-surface text-on-surface font-body">
+<!-- Interactive Chatbot Widget -->
 <div class="fixed bottom-6 right-6 z-[70] flex flex-col items-end">
-    <div class="mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30" id="chatbot-window">
-        <div class="bg-primary p-4 flex items-center justify-between text-white">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <span class="material-symbols-outlined">support_agent</span>
-                </div>
-                <div>
-                    <h4 class="font-bold text-sm">কস্তূরী হেল্পলাইন</h4>
-                    <p class="text-[10px] opacity-80">অনলাইন (সহযোগিতার জন্য)</p>
-                </div>
-            </div>
-            <button class="hover:bg-white/10 p-1 rounded-full transition-colors" onclick="toggleChat()">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-        <div class="h-80 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-3 scroll-smooth" id="chat-content">
-            <div class="chat-message flex flex-col items-start max-w-[85%]">
-                <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-outline-variant/10">
+<!-- Chat Window -->
+<div class="mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30" id="chatbot-window">
+<!-- Header -->
+<div class="bg-primary p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">কস্তূরী হেল্পলাইন</h4>
+<p class="text-[10px] opacity-80 font-medium">অনলাইন (সহযোগিতার জন্য)</p>
+</div>
+</div>
+<button class="hover:bg-white/10 p-1 rounded-full transition-colors" onclick="toggleChat()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Chat Area -->
+<div class="h-80 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-3 scroll-smooth" id="chat-content">
+<!-- Bot Message -->
+<div class="chat-message flex flex-col items-start max-w-[85%]">
+<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-outline-variant/10 leading-relaxed">
                     স্বাগতম! কস্তূরী স্পেশাল হালুয়া সম্পর্কে আপনার কোনো জিজ্ঞাসা আছে কি? আমি আপনাকে কীভাবে সাহায্য করতে পারি?
                 </div>
-                <span class="text-[10px] text-outline mt-1 ml-1">এখনই</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-2" id="quick-replies">
-                <button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('ডেলিভারি খরচ কত?', 'ঢাকার ভেতরে ডেলিভারি চার্জ ১০০ টাকা এবং ঢাকার বাইরে ২০০ টাকা। সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে ডেলিভারি হয়।')">ডেলিভারি খরচ কত?</button>
-                <button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('খাওয়ার নিয়ম কি?', 'প্রতিদিন রাতে ১ চা চামচ হালুয়া হালকা গরম দুধ বা পানির সাথে মিশিয়ে খান।')">খাওয়ার নিয়ম কি?</button>
-            </div>
-        </div>
-        <div class="p-4 border-t border-outline-variant/20 bg-white">
-            <a class="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all" href="https://wa.me/8801917044596" target="_blank">
-                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
-                সরাসরি হোয়াটসঅ্যাপ করুন
-            </a>
-        </div>
-    </div>
-    <button class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center relative group" id="chatbot-toggle" onclick="toggleChat()">
-        <span class="material-symbols-outlined text-3xl chat-icon group-[.active]:hidden">chat_bubble</span>
-        <span class="material-symbols-outlined text-3xl close-icon hidden group-[.active]:block">keyboard_arrow_down</span>
-    </button>
+<span class="text-[10px] text-outline mt-1 ml-1 font-medium">এখনই</span>
 </div>
-
-<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-outline-variant/30">
-    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-        <div class="text-xl font-extrabold text-sky-900">কস্তূরী স্পেশাল হালুয়া</div>
-        <div class="hidden md:flex gap-8 items-center font-semibold text-sm">
-            <a class="text-sky-700 border-b-2 border-sky-700" href="#">হোম</a>
-            <a class="text-slate-600" href="#benefits">উপকারিতা</a>
-            <a class="text-slate-600" href="#reviews">রিভিউ</a>
-            <a class="text-on-primary px-6 py-2 rounded-full" href="#order" style="background-color: #FF0000;">অর্ডার</a>
-        </div>
-    </div>
+<!-- Quick Replies Container -->
+<div class="flex flex-wrap gap-2 mt-2" id="quick-replies">
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('ডেলিভারি খরচ কত?', 'ঢাকার ভেতরে ডেলিভারি চার্জ ১০০ টাকা এবং ঢাকার বাইরে ২০০ টাকা। আমরা সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে হোম ডেলিভারি নিশ্চিত করে থাকি।')">ডেলিভারি খরচ কত?</button>
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('খাওয়ার নিয়ম কি?', 'প্রতিদিন রাতে ঘুমানোর আগে ১ চা চামচ হালুয়া এক গ্লাস হালকা গরম দুধ বা পানির সাথে মিশিয়ে অথবা সরাসরি খেতে পারেন।')">খাওয়ার নিয়ম কি?</button>
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('অর্ডার করতে চাই', 'আপনি নিচের ফর্মটি পূরণ করে অর্ডার করতে পারেন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে মেসেজ দিন।')">অর্ডার করতে চাই</button>
+</div>
+</div>
+<!-- Footer / WhatsApp Link -->
+<div class="p-4 border-t border-outline-variant/20 bg-white">
+<a class="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-md" href="https://wa.me/8801917044596" target="_blank">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                সরাসরি কথা বলুন
+            </a>
+</div>
+</div>
+<!-- Floating Toggle Button -->
+<button class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center relative group" id="chatbot-toggle" onclick="toggleChat()">
+<span class="material-symbols-outlined text-3xl chat-icon group-[.active]:hidden">chat_bubble</span>
+<span class="material-symbols-outlined text-3xl close-icon hidden group-[.active]:block">keyboard_arrow_down</span>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
+</button>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-2xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-primary tracking-tight font-headline">কস্তূরী স্পেশাল হালুয়া</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-headline text-sm tracking-tight" href="#">হোম</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#benefits">উপকারিতা</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#reviews">রিভিউ</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#faq">প্রশ্নাবলী</a>
+<a class="text-on-primary px-7 py-2.5 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-red-500/20" href="#order" style="background-color: #FF0000;">অর্ডার</a>
+</div>
+<a class="text-on-primary px-6 py-2.5 rounded-full font-bold text-sm md:hidden hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-red-500/20" href="#order" style="background-color: #FF0000;">এখনই কিনুন</a>
+</div>
 </nav>
-
 <main class="pt-24">
-    <section class="px-6 py-12 md:py-24 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-bold mb-6">৭২ ঘণ্টার মধ্যে হোম ডেলিভারি</span>
-                <h1 class="font-extrabold text-primary leading-tight">
-                    <span class="block text-6xl md:text-8xl font-black mb-4">কস্তূরী</span>
-                    <span class="block text-3xl md:text-5xl font-bold opacity-90">স্পেশাল হালুয়া</span>
-                </h1>
-                <p class="text-xl text-on-surface-variant my-8 leading-relaxed max-w-lg">
-                    প্রকৃতির বিশুদ্ধতায় তৈরি আমাদের স্পেশাল হালুয়া আপনার শারীরিক শক্তি ও মানসিক প্রশান্তির এক অনন্য সমন্বয়।
-                </p>
-                <div class="flex items-center gap-6 mb-10">
-                    <div class="text-4xl font-bold text-primary">১১৫০ টাকা</div>
-                    <div class="text-lg text-outline line-through">১৩৫০ টাকা</div>
-                </div>
-                <a class="inline-flex items-center justify-center text-on-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl" href="#order" style="background-color: #FF0000;">
-                    অর্ডার করতে ক্লিক করুন
-                    <span class="material-symbols-outlined ml-2">shopping_cart</span>
-                </a>
-            </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <img alt="Kasturi Special Halwa" class="rounded-3xl w-full max-w-[450px] shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uhdzDmMm-Vv87PMBgaW5iERHoPysHnGMYWrXn4ayDAZIoLmTpEjK9Hnx2veG8rn8kz6DFSoeIdFeQ9g3NqJDbTwSspESA16WCF9IdfTntS0FZ-PiFApgCX2m3Z09eHfWRkRr_tOtuDGfSr_0DFtNcfguhdWAreVBv1fA4shimfueQGr5e4rCsqDoPnZPcfB38VwjVnHDJbxscrx8InAsDcGz6lONpoF_At7XIaiBMwn-EaPy8COEnEOVSW6rHJe-iv8JSTkQdl3"/>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-surface-container-low py-24" id="benefits">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">কেন আমাদের হালুয়া সেরা?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-3xl shadow-sm hover:-translate-y-2 transition-transform">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">nature</span>
-                    <h3 class="text-xl font-bold mb-4">সম্পূর্ণ প্রাকৃতিক</h3>
-                    <p>কোনো কৃত্রিম রং বা প্রিজারভেটিভ নেই। ১০০% প্রাকৃতিক উপাদানে তৈরি।</p>
-                </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm hover:-translate-y-2 transition-transform">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">health_and_safety</span>
-                    <h3 class="text-xl font-bold mb-4">মেডিকেল স্ট্যান্ডার্ড</h3>
-                    <p>উন্নত মানের ল্যাবরেটরিতে প্রতিটি ব্যাচ পরীক্ষা করে প্রস্তুত করা হয়।</p>
-                </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm hover:-translate-y-2 transition-transform">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">spa</span>
-                    <h3 class="text-xl font-bold mb-4">শারীরিক ওয়েলনেস</h3>
-                    <p>এটি আপনার ক্লান্তি দূর করে এবং দীর্ঘস্থায়ী প্রাণশক্তি নিশ্চিত করে।</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24" id="order">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-white rounded-[2rem] p-8 md:p-16 shadow-2xl border border-outline-variant/20">
-                <h2 class="text-4xl font-bold text-center mb-12">অর্ডার ফর্ম</h2>
-                <form class="space-y-8" id="orderForm" onsubmit="handleOrderSubmit(event)">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <label class="block text-sm font-bold mb-2">আপনার নাম</label>
-                            <input class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20" id="custName" placeholder="নাম লিখুন" required="" type="text"/>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2">মোবাইল নম্বর</label>
-                            <input class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20" id="custPhone" placeholder="০১৮XXXXXXXX" required="" type="tel"/>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">ডেলিভারি লোকেশন</label>
-                        <select class="w-full bg-slate-50 border-none rounded-xl p-4 cursor-pointer" id="deliveryLocation" required="">
-                            <option value="inside-dhaka">ঢাকার ভেতরে (১০০ টাকা)</option>
-                            <option value="outside-dhaka">ঢাকার বাইরে (২০০ টাকা)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">পুরো ঠিকানা</label>
-                        <textarea class="w-full bg-slate-50 border-none rounded-xl p-4" id="custAddress" placeholder="গ্রাম/মহল্লা, থানা, জেলা" required="" rows="3"></textarea>
-                    </div>
-                    <button class="w-full text-on-primary py-5 rounded-full text-xl font-bold shadow-xl hover:opacity-95" style="background-color: #FF0000;" type="submit">
-                        অর্ডার সম্পন্ন করুন
-                    </button>
-                    <p class="hidden text-center text-secondary font-bold bg-green-50 p-4 rounded-xl" id="whatsappNotice">
-                        ধন্যবাদ! আপনার অর্ডারটি গ্রহণ করা হয়েছে।
+<!-- Hero Section -->
+<section class="px-6 py-12 md:py-28 max-w-7xl mx-auto overflow-hidden">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative z-10">
+<span class="inline-flex items-center gap-2 bg-secondary-container/50 text-on-secondary-container px-5 py-2 rounded-full text-xs font-bold mb-8 tracking-widest uppercase border border-secondary-container">
+<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span>
+                        ৭২ ঘণ্টার মধ্যে হোম ডেলিভারি
+                    </span>
+<div class="mb-10">
+<h1 class="font-extrabold text-primary letter-tight">
+<span class="block text-6xl md:text-[7.5rem] font-black leading-[0.9] mb-4 text-primary">কস্তূরী</span>
+<span class="block text-4xl md:text-5xl font-extrabold opacity-95 tracking-tight">স্পেশাল হালুয়া</span>
+</h1>
+</div>
+<p class="text-lg md:text-xl text-on-surface-variant/90 mb-10 leading-relaxed max-w-lg font-medium">
+                        প্রকৃতির বিশুদ্ধতায় তৈরি আমাদের স্পেশাল হালুয়া আপনার শারীরিক শক্তি ও মানসিক প্রশান্তির এক অনন্য সমন্বয়। কোনো পার্শ্বপ্রতিক্রিয়া ছাড়াই এটি আপনাকে রাখবে প্রাণবন্ত।
                     </p>
-                </form>
-            </div>
-        </div>
-    </section>
+<div class="flex items-center gap-8 mb-12">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline uppercase tracking-widest mb-1">অফার মূল্য</span>
+<div class="text-5xl font-black text-primary">১১৫০<span class="text-2xl ml-1">৳</span></div>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline uppercase tracking-widest mb-1">পূর্বমূল্য</span>
+<div class="text-2xl text-outline/60 line-through">১৩৫০৳</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center text-on-primary px-12 py-5 rounded-full text-xl font-bold hover:opacity-95 transition-all shadow-2xl active:scale-95 group" href="#order" style="background-color: #FF0000; box-shadow: 0 20px 40px -10px rgba(255, 0, 0, 0.3);">
+                        অর্ডার করতে ক্লিক করুন
+                        <span class="material-symbols-outlined ml-3 transition-transform group-hover:translate-x-1">shopping_cart</span>
+</a>
+</div>
+<div class="order-1 md:order-2 relative flex justify-center perspective-1000">
+<div class="absolute -z-10 inset-0 bg-primary-fixed/20 rounded-full blur-[100px] transform scale-90 animate-pulse"></div>
+<img alt="Kasturi Special Halwa Premium Product" class="rounded-[2.5rem] w-full max-w-[480px] h-auto object-contain shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhdzDmMm-Vv87PMBgaW5iERHoPysHnGMYWrXn4ayDAZIoLmTpEjK9Hnx2veG8rn8kz6DFSoeIdFeQ9g3NqJDbTwSspESA16WCF9IdfTntS0FZ-PiFApgCX2m3Z09eHfWRkRr_tOtuDGfSr_0DFtNcfguhdWAreVBv1fA4shimfueQGr5e4rCsqDoPnZPcfB38VwjVnHDJbxscrx8InAsDcGz6lONpoF_At7XIaiBMwn-EaPy8COEnEOVSW6rHJe-iv8JSTkQdl3"/>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="bg-surface-container-low py-28" id="benefits">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">Benefits • উপকারিতা</span>
+<h2 class="text-4xl md:text-5xl font-extrabold letter-tight">কেন আমাদের হালুয়া সেরা?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-secondary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-secondary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">nature</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">সম্পূর্ণ প্রাকৃতিক</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">কোনো কৃত্রিম রং বা প্রিজারভেটিভ ব্যবহার করা হয় না। ১০০% প্রাকৃতিক উপাদানে তৈরি।</p>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-primary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">ক্লিনিক্যালি গ্রেড</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">উন্নত মানের মেডিকেল স্ট্যান্ডার্ড বজায় রেখে প্রতিটি ব্যাচ প্রস্তুত করা হয়।</p>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-tertiary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-tertiary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">শারীরিক ওয়েলনেস</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">এটি আপনার ক্লান্তি দূর করে এবং দীর্ঘস্থায়ী মানসিক ও শারীরিক প্রশান্তি নিশ্চিত করে।</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ingredients Section -->
+<section class="py-28 max-w-7xl mx-auto px-6">
+<div class="bg-white border border-outline-variant/30 rounded-[3.5rem] p-10 md:p-20 overflow-hidden relative shadow-2xl shadow-primary-fixed/10">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-10 letter-tight">উপাদান ও মেডিকেল স্ট্যান্ডার্ড</h2>
+<ul class="space-y-8">
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">খালেস মধু ও ঘি</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">প্রকৃতির সেরা উৎস থেকে সংগৃহীত শুদ্ধ উপাদান যা শরীরের পুষ্টি সরবরাহ করে।</p>
+</div>
+</li>
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">২৫+ ভেষজ উপাদান</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">অশ্বগন্ধা, শিমুল মূল এবং আলকুশিসহ অতি মূল্যবান ভেষজ সমূহের নিখুঁত মিশ্রণ।</p>
+</div>
+</li>
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">মেডিকেল টেস্টিং</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">প্রতিটি উপাদান ল্যাবরেটরিতে কঠোর গুণমান পরীক্ষার পর স্বাস্থ্যসম্মতভাবে ব্যবহৃত হয়।</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative flex justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-75"></div>
+<img alt="Kasturi Special Halwa Details" class="rounded-3xl h-[450px] object-contain w-auto shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida/ADBb0uhdzDmMm-Vv87PMBgaW5iERHoPysHnGMYWrXn4ayDAZIoLmTpEjK9Hnx2veG8rn8kz6DFSoeIdFeQ9g3NqJDbTwSspESA16WCF9IdfTntS0FZ-PiFApgCX2m3Z09eHfWRkRr_tOtuDGfSr_0DFtNcfguhdWAreVBv1fA4shimfueQGr5e4rCsqDoPnZPcfB38VwjVnHDJbxscrx8InAsDcGz6lONpoF_At7XIaiBMwn-EaPy8COEnEOVSW6rHJe-iv8JSTkQdl3"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-28 bg-surface" id="reviews">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">Testimonials • রিভিউ</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-center mb-4 letter-tight">গ্রাহকদের মতামত</h2>
+<p class="text-on-surface-variant font-medium">হাজারো সন্তুষ্ট গ্রাহকের ভালোবাসা আমাদের পথচলার অনুপ্রেরণা।</p>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"অসাধারণ কাজ করে। মাত্র এক সপ্তাহ খাওয়ার পরেই পরিবর্তন বুঝতে পেরেছি। ধন্যবাদ কস্তূরী টিমকে।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    রহমান আহমেদ, ঢাকা
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"আমি আগে অনেক কিছু ট্রাই করেছি কিন্তু এই হালুয়াটির স্বাদ এবং গুণমান সত্যিই অসাধারণ।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    আব্দুল করিম, সিলেট
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"৭২ ঘণ্টার কথা বলেছিল কিন্তু আমি তার আগেই ডেলিভারি পেয়েছি। প্রোডাক্টের প্যাকেজিং অনেক প্রিমিয়াম।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    সোলায়মান হক, চট্টগ্রাম
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-28 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">FAQ • প্রশ্নাবলী</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mt-4 letter-tight">সাধারণ কিছু প্রশ্ন ও উত্তর</h2>
+</div>
+<div class="space-y-6">
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>ডেলিভারি চার্জ কত এবং কত সময় লাগে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">ঢাকার ভেতরে ডেলিভারি চার্জ ১০০ টাকা এবং ঢাকার বাইরে ২০০ টাকা। আমরা সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে ডেলিভারি সম্পন্ন করে থাকি।</div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>হালুয়াটি খাওয়ার নিয়ম কী?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            প্রতিদিন রাতে ঘুমানোর আগে ১ চা চামচ হালুয়া এক গ্লাস হালকা গরম দুধ বা পানির সাথে মিশিয়ে অথবা সরাসরি খেতে পারেন।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>এর কি কোনো পার্শ্বপ্রতিক্রিয়া আছে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            না, আমাদের হালুয়া ১০০% প্রাকৃতিক ও ভেষজ উপাদানে তৈরি। এতে কোনো ক্ষতিকর কেমিক্যাল বা স্টেরয়েড নেই, তাই এটি সম্পূর্ণ নিরাপদ।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>ডেলিভারি পাওয়ার পর টাকা দেওয়া যাবে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            হ্যাঁ, আমরা ক্যাশ অন ডেলিভারি সুবিধা দিচ্ছি। পণ্য হাতে পেয়ে গুণমান যাচাই করে তারপর আপনি মূল্য পরিশোধ করতে পারবেন।
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Checkout Section -->
+<section class="py-28 bg-surface-container-high" id="order">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-white rounded-[3rem] p-8 md:p-20 shadow-2xl border border-outline-variant/20">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-extrabold mb-6 letter-tight">অর্ডার ফর্ম</h2>
+<p class="text-on-surface-variant font-medium text-lg">নিচের তথ্যগুলো পূরণ করে আপনার অর্ডারটি কনফার্ম করুন।</p>
+<div class="mt-8 inline-flex items-center bg-secondary/10 text-secondary font-extrabold gap-3 px-6 py-2 rounded-full text-sm">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+                            ৭২ ঘণ্টার মধ্যে ডেলিভারি নিশ্চিত
+                        </div>
+</div>
+<form class="space-y-10" id="orderForm" onsubmit="handleOrderSubmit(event)">
+<div class="grid md:grid-cols-2 gap-10">
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">আপনার নাম</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custName" placeholder="পুরো নাম লিখুন" required="" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">মোবাইল নম্বর</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custPhone" placeholder="০১৮XXXXXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">ডেলিভারি লোকেশন</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium cursor-pointer outline-none appearance-none" id="deliveryLocation" required="">
+<option disabled="" selected="" value="">লোকেশন নির্বাচন করুন</option>
+<option value="inside-dhaka">ঢাকার ভেতরে (১০০ টাকা)</option>
+<option value="outside-dhaka">ঢাকার বাইরে (২০০ টাকা)</option>
+</select>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">পুরো ঠিকানা</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custAddress" placeholder="গ্রাম/মহল্লা, থানা, জেলা" required="" rows="3"></textarea>
+</div>
+<div class="space-y-6 pt-6">
+<button class="w-full text-on-primary py-6 rounded-full text-2xl font-black shadow-2xl hover:opacity-95 transition-all active:scale-[0.98] tracking-tight" style="background-color: #FF0000; box-shadow: 0 25px 50px -12px rgba(255, 0, 0, 0.4);" type="submit">
+                                অর্ডার সম্পন্ন করুন
+                            </button>
+<div class="hidden text-center text-secondary font-bold bg-secondary/5 p-6 rounded-[2rem] border border-secondary/10" id="whatsappNotice">
+<p class="mb-2">ধন্যবাদ! আপনার অর্ডারটি গ্রহণ করা হয়েছে।</p>
+<p class="text-sm">বিস্তারিত তথ্য পাঠিয়ে আমাদের WhatsApp নম্বর <a class="underline decoration-2 underline-offset-4" href="https://wa.me/8801917044596">01917044596</a> এ একটি মেসেজ দিন।</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
 </main>
-
-<footer class="bg-slate-50 border-t py-12 text-center">
-    <p class="font-bold text-sky-900">কস্তূরী স্পেশাল হালুয়া</p>
-    <p class="text-xs text-slate-500 mt-2">© ২০২৪ সর্বস্বত্ব সংরক্ষিত।</p>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant/20 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="mb-10 md:mb-0 text-center md:text-left">
+<div class="text-2xl font-black text-primary mb-4 tracking-tight font-headline">কস্তূরী স্পেশাল হালুয়া</div>
+<p class="font-medium text-sm text-on-surface-variant/60">© ২০২৪ কস্তূরী স্পেশাল হালুয়া - সর্বস্বত্ব সংরক্ষিত।</p>
+</div>
+<div class="flex gap-12">
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">শর্তাবলী</a>
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">গোপনীয়তা নীতি</a>
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">যোগাযোগ</a>
+</div>
+</div>
 </footer>
-
 <script>
-    function handleOrderSubmit(event) {
-        event.preventDefault();
-        document.getElementById('whatsappNotice').classList.remove('hidden');
-        alert("অর্ডার সফলভাবে গ্রহণ করা হয়েছে!");
-    }
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+            const notice = document.getElementById('whatsappNotice');
+            notice.classList.remove('hidden');
+            notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
 
-    function toggleChat() {
-        document.getElementById('chatbot-window').classList.toggle('active');
-        document.getElementById('chatbot-toggle').classList.toggle('active');
-    }
+        function toggleChat() {
+            const window = document.getElementById('chatbot-window');
+            const toggle = document.getElementById('chatbot-toggle');
+            window.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
 
-    function askQuestion(question, answer) {
-        const chatContent = document.getElementById('chat-content');
-        const userMsg = document.createElement('div');
-        userMsg.className = 'chat-message flex flex-col items-end self-end max-w-[85%]';
-        userMsg.innerHTML = `<div class="bg-primary text-white p-3 rounded-2xl text-sm">${question}</div>`;
-        chatContent.appendChild(userMsg);
+        function askQuestion(question, answer) {
+            const chatContent = document.getElementById('chat-content');
+            
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message flex flex-col items-end self-end max-w-[85%]';
+            userMsg.innerHTML = `
+                <div class="bg-primary text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm font-medium">
+                    ${question}
+                </div>
+            `;
+            chatContent.appendChild(userMsg);
 
-        setTimeout(() => {
-            const botMsg = document.createElement('div');
-            botMsg.className = 'chat-message flex flex-col items-start max-w-[85%]';
-            botMsg.innerHTML = `<div class="bg-white p-3 rounded-2xl shadow-sm text-sm border border-outline-variant/10">${answer}</div>`;
-            chatContent.appendChild(botMsg);
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-message flex flex-col items-start max-w-[85%]';
+                botMsg.innerHTML = `
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-outline-variant/10 leading-relaxed font-medium">
+                        ${answer}
+                    </div>
+                    <span class="text-[10px] text-outline mt-1 ml-1 font-medium">এখনই</span>
+                `;
+                chatContent.appendChild(botMsg);
+                chatContent.scrollTop = chatContent.scrollHeight;
+            }, 600);
+
             chatContent.scrollTop = chatContent.scrollHeight;
-        }, 600);
-    }
-</script>
-</body>
-</html>
+        }
+    </script>
+</body></html><!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>কস্তূরী স্পেশাল হালুয়া - প্রিমিয়াম হেলথ সাপ্লিমেন্ট</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d3e4ff",
+              "surface-dim": "#d7dadc",
+              "surface": "#f7fafc",
+              "outline": "#727782",
+              "surface-container-lowest": "#ffffff",
+              "background": "#f7fafc",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#00504c",
+              "on-tertiary-container": "#83ded8",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#00210f",
+              "inverse-on-surface": "#eef1f3",
+              "on-secondary-container": "#1c7245",
+              "secondary-fixed-dim": "#86d8a1",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#00522d",
+              "surface-container-highest": "#e0e3e5",
+              "on-primary-fixed-variant": "#004881",
+              "on-primary-container": "#b1d1ff",
+              "surface-container": "#ebeef0",
+              "on-background": "#181c1e",
+              "surface-container-high": "#e5e9eb",
+              "primary": "#004277",
+              "tertiary-fixed-dim": "#7bd6cf",
+              "secondary-container": "#a1f5bc",
+              "tertiary-fixed": "#97f2ec",
+              "tertiary": "#004946",
+              "on-surface-variant": "#414750",
+              "secondary": "#136c3f",
+              "primary-fixed-dim": "#a2c9ff",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#00201e",
+              "primary-container": "#005a9e",
+              "surface-variant": "#e0e3e5",
+              "surface-tint": "#1260a5",
+              "tertiary-container": "#00635f",
+              "inverse-primary": "#a2c9ff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c1c7d2",
+              "on-surface": "#181c1e",
+              "on-primary-fixed": "#001c38",
+              "inverse-surface": "#2d3133",
+              "secondary-fixed": "#a1f5bc",
+              "surface-container-low": "#f1f4f6"
+            },
+            fontFamily: {
+              "headline": ["Hind Siliguri", "sans-serif"],
+              "body": ["Hind Siliguri", "sans-serif"],
+              "label": ["Hind Siliguri", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { 
+            font-family: 'Hind Siliguri', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, .font-manrope { font-family: 'Hind Siliguri', sans-serif; }
+        html { scroll-behavior: smooth; }
+    
+        a[href='#order']:hover, button[type='submit']:hover {
+            background-color: #CC0000 !important;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        #chatbot-window {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0.95) translateY(10px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        #chatbot-window.active {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .chat-message {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Premium Typography Enhancements */
+        .text-balanced { text-wrap: balance; }
+        .letter-tight { letter-spacing: -0.01em; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<!-- Interactive Chatbot Widget -->
+<div class="fixed bottom-6 right-6 z-[70] flex flex-col items-end">
+<!-- Chat Window -->
+<div class="mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30" id="chatbot-window">
+<!-- Header -->
+<div class="bg-primary p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">কস্তূরী হেল্পলাইন</h4>
+<p class="text-[10px] opacity-80 font-medium">অনলাইন (সহযোগিতার জন্য)</p>
+</div>
+</div>
+<button class="hover:bg-white/10 p-1 rounded-full transition-colors" onclick="toggleChat()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Chat Area -->
+<div class="h-80 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-3 scroll-smooth" id="chat-content">
+<!-- Bot Message -->
+<div class="chat-message flex flex-col items-start max-w-[85%]">
+<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-outline-variant/10 leading-relaxed">
+                    স্বাগতম! কস্তূরী স্পেশাল হালুয়া সম্পর্কে আপনার কোনো জিজ্ঞাসা আছে কি? আমি আপনাকে কীভাবে সাহায্য করতে পারি?
+                </div>
+<span class="text-[10px] text-outline mt-1 ml-1 font-medium">এখনই</span>
+</div>
+<!-- Quick Replies Container -->
+<div class="flex flex-wrap gap-2 mt-2" id="quick-replies">
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('ডেলিভারি খরচ কত?', 'ঢাকার ভেতরে ডেলিভারি চার্জ ১০০ টাকা এবং ঢাকার বাইরে ২০০ টাকা। আমরা সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে হোম ডেলিভারি নিশ্চিত করে থাকি।')">ডেলিভারি খরচ কত?</button>
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('খাওয়ার নিয়ম কি?', 'প্রতিদিন রাতে ঘুমানোর আগে ১ চা চামচ হালুয়া এক গ্লাস হালকা গরম দুধ বা পানির সাথে মিশিয়ে অথবা সরাসরি খেতে পারেন।')">খাওয়ার নিয়ম কি?</button>
+<button class="text-xs bg-primary/10 text-primary border border-primary/20 px-3 py-2 rounded-full hover:bg-primary hover:text-white transition-all font-semibold" onclick="askQuestion('অর্ডার করতে চাই', 'আপনি নিচের ফর্মটি পূরণ করে অর্ডার করতে পারেন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে মেসেজ দিন।')">অর্ডার করতে চাই</button>
+</div>
+</div>
+<!-- Footer / WhatsApp Link -->
+<div class="p-4 border-t border-outline-variant/20 bg-white">
+<a class="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-md" href="https://wa.me/8801917044596" target="_blank">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                সরাসরি কথা বলুন
+            </a>
+</div>
+</div>
+<!-- Floating Toggle Button -->
+<button class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center relative group" id="chatbot-toggle" onclick="toggleChat()">
+<span class="material-symbols-outlined text-3xl chat-icon group-[.active]:hidden">chat_bubble</span>
+<span class="material-symbols-outlined text-3xl close-icon hidden group-[.active]:block">keyboard_arrow_down</span>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
+</button>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-2xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-primary tracking-tight font-headline">কস্তূরী স্পেশাল হালুয়া</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-headline text-sm tracking-tight" href="#">হোম</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#benefits">উপকারিতা</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#reviews">রিভিউ</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-headline text-sm font-bold tracking-tight" href="#faq">প্রশ্নাবলী</a>
+<a class="text-on-primary px-7 py-2.5 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-red-500/20" href="#order" style="background-color: #FF0000;">অর্ডার</a>
+</div>
+<a class="text-on-primary px-6 py-2.5 rounded-full font-bold text-sm md:hidden hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-red-500/20" href="#order" style="background-color: #FF0000;">এখনই কিনুন</a>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-6 py-12 md:py-28 max-w-7xl mx-auto overflow-hidden">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative z-10">
+<span class="inline-flex items-center gap-2 bg-secondary-container/50 text-on-secondary-container px-5 py-2 rounded-full text-xs font-bold mb-8 tracking-widest uppercase border border-secondary-container">
+<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span>
+                        ৭২ ঘণ্টার মধ্যে হোম ডেলিভারি
+                    </span>
+<div class="mb-10">
+<h1 class="font-extrabold text-primary letter-tight">
+<span class="block text-6xl md:text-[7.5rem] font-black leading-[0.9] mb-4 text-primary">কস্তূরী</span>
+<span class="block text-4xl md:text-5xl font-extrabold opacity-95 tracking-tight">স্পেশাল হালুয়া</span>
+</h1>
+</div>
+<p class="text-lg md:text-xl text-on-surface-variant/90 mb-10 leading-relaxed max-w-lg font-medium">
+                        প্রকৃতির বিশুদ্ধতায় তৈরি আমাদের স্পেশাল হালুয়া আপনার শারীরিক শক্তি ও মানসিক প্রশান্তির এক অনন্য সমন্বয়। কোনো পার্শ্বপ্রতিক্রিয়া ছাড়াই এটি আপনাকে রাখবে প্রাণবন্ত।
+                    </p>
+<div class="flex items-center gap-8 mb-12">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline uppercase tracking-widest mb-1">অফার মূল্য</span>
+<div class="text-5xl font-black text-primary">১১৫০<span class="text-2xl ml-1">৳</span></div>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-outline uppercase tracking-widest mb-1">পূর্বমূল্য</span>
+<div class="text-2xl text-outline/60 line-through">১৩৫০৳</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center text-on-primary px-12 py-5 rounded-full text-xl font-bold hover:opacity-95 transition-all shadow-2xl active:scale-95 group" href="#order" style="background-color: #FF0000; box-shadow: 0 20px 40px -10px rgba(255, 0, 0, 0.3);">
+                        অর্ডার করতে ক্লিক করুন
+                        <span class="material-symbols-outlined ml-3 transition-transform group-hover:translate-x-1">shopping_cart</span>
+</a>
+</div>
+<div class="order-1 md:order-2 relative flex justify-center perspective-1000">
+<div class="absolute -z-10 inset-0 bg-primary-fixed/20 rounded-full blur-[100px] transform scale-90 animate-pulse"></div>
+<img alt="Kasturi Special Halwa Premium Product" class="rounded-[2.5rem] w-full max-w-[480px] h-auto object-contain shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhdzDmMm-Vv87PMBgaW5iERHoPysHnGMYWrXn4ayDAZIoLmTpEjK9Hnx2veG8rn8kz6DFSoeIdFeQ9g3NqJDbTwSspESA16WCF9IdfTntS0FZ-PiFApgCX2m3Z09eHfWRkRr_tOtuDGfSr_0DFtNcfguhdWAreVBv1fA4shimfueQGr5e4rCsqDoPnZPcfB38VwjVnHDJbxscrx8InAsDcGz6lONpoF_At7XIaiBMwn-EaPy8COEnEOVSW6rHJe-iv8JSTkQdl3"/>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="bg-surface-container-low py-28" id="benefits">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">Benefits • উপকারিতা</span>
+<h2 class="text-4xl md:text-5xl font-extrabold letter-tight">কেন আমাদের হালুয়া সেরা?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-secondary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-secondary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">nature</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">সম্পূর্ণ প্রাকৃতিক</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">কোনো কৃত্রিম রং বা প্রিজারভেটিভ ব্যবহার করা হয় না। ১০০% প্রাকৃতিক উপাদানে তৈরি।</p>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-primary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">ক্লিনিক্যালি গ্রেড</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">উন্নত মানের মেডিকেল স্ট্যান্ডার্ড বজায় রেখে প্রতিটি ব্যাচ প্রস্তুত করা হয়।</p>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-xl transition-all duration-500 group">
+<div class="w-16 h-16 bg-tertiary-fixed flex items-center justify-center rounded-2xl mb-8 text-on-tertiary-fixed transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 letter-tight">শারীরিক ওয়েলনেস</h3>
+<p class="text-on-surface-variant/90 leading-relaxed font-medium">এটি আপনার ক্লান্তি দূর করে এবং দীর্ঘস্থায়ী মানসিক ও শারীরিক প্রশান্তি নিশ্চিত করে।</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ingredients Section -->
+<section class="py-28 max-w-7xl mx-auto px-6">
+<div class="bg-white border border-outline-variant/30 rounded-[3.5rem] p-10 md:p-20 overflow-hidden relative shadow-2xl shadow-primary-fixed/10">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-10 letter-tight">উপাদান ও মেডিকেল স্ট্যান্ডার্ড</h2>
+<ul class="space-y-8">
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">খালেস মধু ও ঘি</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">প্রকৃতির সেরা উৎস থেকে সংগৃহীত শুদ্ধ উপাদান যা শরীরের পুষ্টি সরবরাহ করে।</p>
+</div>
+</li>
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">২৫+ ভেষজ উপাদান</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">অশ্বগন্ধা, শিমুল মূল এবং আলকুশিসহ অতি মূল্যবান ভেষজ সমূহের নিখুঁত মিশ্রণ।</p>
+</div>
+</li>
+<li class="flex items-start gap-6 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary font-bold">verified</span>
+</div>
+<div>
+<h4 class="font-extrabold text-xl mb-1">মেডিকেল টেস্টিং</h4>
+<p class="text-on-surface-variant font-medium leading-relaxed">প্রতিটি উপাদান ল্যাবরেটরিতে কঠোর গুণমান পরীক্ষার পর স্বাস্থ্যসম্মতভাবে ব্যবহৃত হয়।</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative flex justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-75"></div>
+<img alt="Kasturi Special Halwa Details" class="rounded-3xl h-[450px] object-contain w-auto shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida/ADBb0uhdzDmMm-Vv87PMBgaW5iERHoPysHnGMYWrXn4ayDAZIoLmTpEjK9Hnx2veG8rn8kz6DFSoeIdFeQ9g3NqJDbTwSspESA16WCF9IdfTntS0FZ-PiFApgCX2m3Z09eHfWRkRr_tOtuDGfSr_0DFtNcfguhdWAreVBv1fA4shimfueQGr5e4rCsqDoPnZPcfB38VwjVnHDJbxscrx8InAsDcGz6lONpoF_At7XIaiBMwn-EaPy8COEnEOVSW6rHJe-iv8JSTkQdl3"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-28 bg-surface" id="reviews">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">Testimonials • রিভিউ</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-center mb-4 letter-tight">গ্রাহকদের মতামত</h2>
+<p class="text-on-surface-variant font-medium">হাজারো সন্তুষ্ট গ্রাহকের ভালোবাসা আমাদের পথচলার অনুপ্রেরণা।</p>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"অসাধারণ কাজ করে। মাত্র এক সপ্তাহ খাওয়ার পরেই পরিবর্তন বুঝতে পেরেছি। ধন্যবাদ কস্তূরী টিমকে।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    রহমান আহমেদ, ঢাকা
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"আমি আগে অনেক কিছু ট্রাই করেছি কিন্তু এই হালুয়াটির স্বাদ এবং গুণমান সত্যিই অসাধারণ।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    আব্দুল করিম, সিলেট
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-outline-variant/10 hover:shadow-xl transition-all duration-500">
+<div class="flex text-amber-400 mb-6 scale-110 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 leading-relaxed font-medium text-lg">"৭২ ঘণ্টার কথা বলেছিল কিন্তু আমি তার আগেই ডেলিভারি পেয়েছি। প্রোডাক্টের প্যাকেজিং অনেক প্রিমিয়াম।"</p>
+<div class="font-bold text-primary flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary/20"></div>
+    সোলায়মান হক, চট্টগ্রাম
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-28 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-4 block">FAQ • প্রশ্নাবলী</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mt-4 letter-tight">সাধারণ কিছু প্রশ্ন ও উত্তর</h2>
+</div>
+<div class="space-y-6">
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>ডেলিভারি চার্জ কত এবং কত সময় লাগে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">ঢাকার ভেতরে ডেলিভারি চার্জ ১০০ টাকা এবং ঢাকার বাইরে ২০০ টাকা। আমরা সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে ডেলিভারি সম্পন্ন করে থাকি।</div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>হালুয়াটি খাওয়ার নিয়ম কী?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            প্রতিদিন রাতে ঘুমানোর আগে ১ চা চামচ হালুয়া এক গ্লাস হালকা গরম দুধ বা পানির সাথে মিশিয়ে অথবা সরাসরি খেতে পারেন।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>এর কি কোনো পার্শ্বপ্রতিক্রিয়া আছে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            না, আমাদের হালুয়া ১০০% প্রাকৃতিক ও ভেষজ উপাদানে তৈরি। এতে কোনো ক্ষতিকর কেমিক্যাল বা স্টেরয়েড নেই, তাই এটি সম্পূর্ণ নিরাপদ।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-3xl p-8 border border-outline-variant/10 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<summary class="flex justify-between items-center font-bold text-xl list-none tracking-tight">
+<span>ডেলিভারি পাওয়ার পর টাকা দেওয়া যাবে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300 text-primary">expand_more</span>
+</summary>
+<div class="mt-6 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-6 font-medium">
+                            হ্যাঁ, আমরা ক্যাশ অন ডেলিভারি সুবিধা দিচ্ছি। পণ্য হাতে পেয়ে গুণমান যাচাই করে তারপর আপনি মূল্য পরিশোধ করতে পারবেন।
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Checkout Section -->
+<section class="py-28 bg-surface-container-high" id="order">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-white rounded-[3rem] p-8 md:p-20 shadow-2xl border border-outline-variant/20">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-extrabold mb-6 letter-tight">অর্ডার ফর্ম</h2>
+<p class="text-on-surface-variant font-medium text-lg">নিচের তথ্যগুলো পূরণ করে আপনার অর্ডারটি কনফার্ম করুন।</p>
+<div class="mt-8 inline-flex items-center bg-secondary/10 text-secondary font-extrabold gap-3 px-6 py-2 rounded-full text-sm">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+                            ৭২ ঘণ্টার মধ্যে ডেলিভারি নিশ্চিত
+                        </div>
+</div>
+<form class="space-y-10" id="orderForm" onsubmit="handleOrderSubmit(event)">
+<div class="grid md:grid-cols-2 gap-10">
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">আপনার নাম</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custName" placeholder="পুরো নাম লিখুন" required="" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">মোবাইল নম্বর</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custPhone" placeholder="০১৮XXXXXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">ডেলিভারি লোকেশন</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium cursor-pointer outline-none appearance-none" id="deliveryLocation" required="">
+<option disabled="" selected="" value="">লোকেশন নির্বাচন করুন</option>
+<option value="inside-dhaka">ঢাকার ভেতরে (১০০ টাকা)</option>
+<option value="outside-dhaka">ঢাকার বাইরে (২০০ টাকা)</option>
+</select>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-extrabold text-primary ml-1 uppercase tracking-widest">পুরো ঠিকানা</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/30 rounded-2xl p-5 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium outline-none" id="custAddress" placeholder="গ্রাম/মহল্লা, থানা, জেলা" required="" rows="3"></textarea>
+</div>
+<div class="space-y-6 pt-6">
+<button class="w-full text-on-primary py-6 rounded-full text-2xl font-black shadow-2xl hover:opacity-95 transition-all active:scale-[0.98] tracking-tight" style="background-color: #FF0000; box-shadow: 0 25px 50px -12px rgba(255, 0, 0, 0.4);" type="submit">
+                                অর্ডার সম্পন্ন করুন
+                            </button>
+<div class="hidden text-center text-secondary font-bold bg-secondary/5 p-6 rounded-[2rem] border border-secondary/10" id="whatsappNotice">
+<p class="mb-2">ধন্যবাদ! আপনার অর্ডারটি গ্রহণ করা হয়েছে।</p>
+<p class="text-sm">বিস্তারিত তথ্য পাঠিয়ে আমাদের WhatsApp নম্বর <a class="underline decoration-2 underline-offset-4" href="https://wa.me/8801917044596">01917044596</a> এ একটি মেসেজ দিন।</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant/20 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-16 w-full max-w-7xl mx-auto">
+<div class="mb-10 md:mb-0 text-center md:text-left">
+<div class="text-2xl font-black text-primary mb-4 tracking-tight font-headline">কস্তূরী স্পেশাল হালুয়া</div>
+<p class="font-medium text-sm text-on-surface-variant/60">© ২০২৪ কস্তূরী স্পেশাল হালুয়া - সর্বস্বত্ব সংরক্ষিত।</p>
+</div>
+<div class="flex gap-12">
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">শর্তাবলী</a>
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">গোপনীয়তা নীতি</a>
+<a class="font-bold text-sm text-on-surface-variant/70 hover:text-primary transition-colors" href="#">যোগাযোগ</a>
+</div>
+</div>
+</footer>
+<script>
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+            const notice = document.getElementById('whatsappNotice');
+            notice.classList.remove('hidden');
+            notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function toggleChat() {
+            const window = document.getElementById('chatbot-window');
+            const toggle = document.getElementById('chatbot-toggle');
+            window.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        function askQuestion(question, answer) {
+            const chatContent = document.getElementById('chat-content');
+            
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message flex flex-col items-end self-end max-w-[85%]';
+            userMsg.innerHTML = `
+                <div class="bg-primary text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm font-medium">
+                    ${question}
+                </div>
+            `;
+            chatContent.appendChild(userMsg);
+
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-message flex flex-col items-start max-w-[85%]';
+                botMsg.innerHTML = `
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-outline-variant/10 leading-relaxed font-medium">
+                        ${answer}
+                    </div>
+                    <span class="text-[10px] text-outline mt-1 ml-1 font-medium">এখনই</span>
+                `;
+                chatContent.appendChild(botMsg);
+                chatContent.scrollTop = chatContent.scrollHeight;
+            }, 600);
+
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+    </script>
+</body></html>            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+    </script>
+</body></html>
