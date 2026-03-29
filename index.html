@@ -78,9 +78,23 @@
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .brand-font { font-family: 'Manrope', sans-serif; }
         html { scroll-behavior: smooth; }
+    
+        a[href='#order']:hover, button[type='submit']:hover {
+            background-color: #CC0000 !important;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface">
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-6 right-6 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center" href="https://wa.me/8801917044596" target="_blank">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-outline-variant/30">
 <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -89,9 +103,10 @@
 <a class="text-sky-700 font-bold border-b-2 border-sky-700 pb-1 font-manrope text-sm tracking-tight" href="#">হোম</a>
 <a class="text-slate-600 hover:text-sky-600 transition-colors duration-300 font-manrope text-sm font-semibold tracking-tight" href="#benefits">উপকারিতা</a>
 <a class="text-slate-600 hover:text-sky-600 transition-colors duration-300 font-manrope text-sm font-semibold tracking-tight" href="#reviews">রিভিউ</a>
-<a class="text-slate-600 hover:text-sky-600 transition-colors duration-300 font-manrope text-sm font-semibold tracking-tight" href="#order">অর্ডার</a>
+<a class="text-slate-600 hover:text-sky-600 transition-colors duration-300 font-manrope text-sm font-semibold tracking-tight" href="#faq">প্রশ্নাবলী</a>
+<a class="text-on-primary px-6 py-2 rounded-full font-bold text-sm hover:opacity-80 transition-all active:scale-95" href="#order" style="background-color: #FF0000;">অর্ডার</a>
 </div>
-<a class="text-on-primary px-6 py-2 rounded-full font-bold text-sm hover:opacity-80 transition-all active:scale-95" href="#order" style="background-color: #1b5e20;">এখনই কিনুন</a>
+<a class="text-on-primary px-6 py-2 rounded-full font-bold text-sm md:hidden hover:opacity-80 transition-all active:scale-95" href="#order" style="background-color: #FF0000;">এখনই কিনুন</a>
 </div>
 </nav>
 <main class="pt-24">
@@ -110,7 +125,7 @@
 <div class="text-4xl font-bold text-primary">১১৫০ টাকা</div>
 <div class="text-lg text-outline line-through">১৩৫০ টাকা</div>
 </div>
-<a class="inline-flex items-center justify-center text-on-primary px-10 py-5 rounded-full text-xl font-bold hover:opacity-90 transition-all shadow-xl" href="#order" style="background-color: #1b5e20; box-shadow: 0 20px 25px -5px rgba(27, 94, 32, 0.2);">
+<a class="inline-flex items-center justify-center text-on-primary px-10 py-5 rounded-full text-xl font-bold hover:opacity-90 transition-all shadow-xl" href="#order" style="background-color: #FF0000; box-shadow: 0 20px 25px -5px rgba(255, 0, 0, 0.2);">
                         অর্ডার করতে ক্লিক করুন
                         <span class="material-symbols-outlined ml-2">shopping_cart</span>
 </a>
@@ -163,7 +178,7 @@
 <li class="flex items-start gap-4">
 <span class="material-symbols-outlined text-secondary pt-1">verified</span>
 <div>
-<h4 class="font-bold text-lg">খাঁটি মধু ও ঘি</h4>
+<h4 class="font-bold text-lg">খালেস মধু ও ঘি</h4>
 <p class="text-on-surface-variant">প্রকৃতির সেরা উৎস থেকে সংগৃহীত শুদ্ধ উপাদান।</p>
 </div>
 </li>
@@ -230,6 +245,53 @@
 </div>
 </div>
 </section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">জিজ্ঞাসিত প্রশ্নাবলী</span>
+<h2 class="text-4xl font-bold mt-4">সাধারণ কিছু প্রশ্ন ও উত্তর</h2>
+</div>
+<div class="space-y-4">
+<details class="faq-item group bg-white rounded-2xl p-6 border border-outline-variant/20 cursor-pointer shadow-sm">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+<span>ডেলিভারি চার্জ কত এবং কত সময় লাগে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+                            সারা বাংলাদেশে ডেলিভারি চার্জ মাত্র ৮০ টাকা। আমরা সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে ডেলিভারি সম্পন্ন করে থাকি।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-2xl p-6 border border-outline-variant/20 cursor-pointer shadow-sm">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+<span>হালুয়াটি খাওয়ার নিয়ম কী?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+                            প্রতিদিন রাতে ঘুমানোর আগে ১ চা চামচ হালুয়া এক গ্লাস হালকা গরম দুধ বা পানির সাথে মিশিয়ে অথবা সরাসরি খেতে পারেন।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-2xl p-6 border border-outline-variant/20 cursor-pointer shadow-sm">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+<span>এর কি কোনো পার্শ্বপ্রতিক্রিয়া আছে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+                            না, আমাদের হালুয়া ১০০% প্রাকৃতিক ও ভেষজ উপাদানে তৈরি। এতে কোনো ক্ষতিকর কেমিক্যাল বা স্টেরয়েড নেই, তাই এটি সম্পূর্ণ নিরাপদ।
+                        </div>
+</details>
+<details class="faq-item group bg-white rounded-2xl p-6 border border-outline-variant/20 cursor-pointer shadow-sm">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+<span>ডেলিভারি পাওয়ার পর টাকা দেওয়া যাবে?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+                            হ্যাঁ, আমরা ক্যাশ অন ডেলিভারি সুবিধা দিচ্ছি। পণ্য হাতে পেয়ে গুণমান যাচাই করে তারপর আপনি মূল্য পরিশোধ করতে পারবেন।
+                        </div>
+</details>
+</div>
+</div>
+</section>
 <!-- Checkout Section -->
 <section class="py-24 bg-surface-container-high" id="order">
 <div class="max-w-4xl mx-auto px-6">
@@ -258,7 +320,7 @@
 <textarea class="w-full bg-surface-container-highest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" id="custAddress" placeholder="গ্রাম/মহল্লা, থানা, জেলা" required="" rows="3"></textarea>
 </div>
 <div class="space-y-4">
-<button class="w-full text-on-primary py-5 rounded-full text-xl font-bold shadow-xl hover:opacity-95 transition-all active:scale-[0.98]" style="background-color: #1b5e20; box-shadow: 0 20px 25px -5px rgba(27, 94, 32, 0.2);" type="submit">
+<button class="w-full text-on-primary py-5 rounded-full text-xl font-bold shadow-xl hover:opacity-95 transition-all active:scale-[0.98]" style="background-color: #FF0000; box-shadow: 0 20px 25px -5px rgba(255, 0, 0, 0.2);" type="submit">
                                 অর্ডার সম্পন্ন করুন
                             </button>
 <p class="hidden text-center text-secondary font-bold bg-secondary-container/20 p-4 rounded-xl" id="whatsappNotice">
